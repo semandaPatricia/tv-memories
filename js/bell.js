@@ -27,7 +27,7 @@ function ringbell() {
 
   // Redirect after last ring (replace with your actual URL)
   setTimeout(() => {
-    window.location.href = 'https://fonts.google.com/';
+    window.location.href = '/contact.html';
   }, ringCount * 500); // Delay based on ring count and individual ring delay
 }
 

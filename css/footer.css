@@ -30,6 +30,8 @@
 	border-style: dotted;
 	
 	
+	
+	
   }
   
   .footer_headings {
@@ -133,7 +135,7 @@ textarea {
 	width: 380px;
 }
  .nude{
-	filter: blur(2px);
+	filter: blur(1.8px);
  }
 
   /*  small Footer */
@@ -192,3 +194,17 @@ textarea {
 	  top: 30%;
 	}
   }
+
+  .arrow{
+	width: 15px;
+	height: 15px;
+	
+	
+}
+.seduce{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	
+}
