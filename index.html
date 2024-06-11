@@ -5,9 +5,90 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+      <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="app"></div>
+       <!----------------------------------------------------/ navbar--------------------------------------------------->
+    <nav class="navbar">
+      <div class="content">
+        <div class="logo">
+          <a href="#">Mara</a>
+        </div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    <hr>
+    </nav>
+     <!----------------------------------------------------/LandingPage--------------------------------------------------->
+  <section class="section gutter">
+    <div class="wrapper">
+      
+      <div class="gif-tv">
+        <div id="gif_tv_viewport" class="viewport">
+          <img id="gif_tv_video" class="video" src="/video-url-goes-here/">
+          <div id="gif_tv_pixels" class="pixels" style="background-image: url('https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571119227/vhs-overlay_zpzs7x.png')"></div>
+          <div class="meta-left">
+            <span id="gif_tv_message_channel"></span>
+            <span id="gif_tv_message_hd" class="small-message"></span>
+            <span id="gif_tv_message_hue_shift" class="small-message"></span>
+            <span id="gif_tv_message_bright" class="small-message"></span>
+            <span id="gif_tv_message_color" class="small-message"></span>
+          </div>
+          <div class="meta-right">
+            <span id="gif_tv_message_volume"></span>
+            <span id="gif_tv_message_mute" class="small-message"></span>
+          </div>
+        </div>
+        <img class="tv" src="https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571119227/80s-tv_ekkex2.png">
+        
+        <button id="gif_tv_button_channel" class="dial" title="Change the Channels"></button>
+        <button id="gif_tv_button_volume" class="dial" title="Mute / Unmute"></button>
+    
+        <button id="gif_tv_button_mute" class="switch" title="Mute / Unmute"></button>
+        <button id="gif_tv_button_hd" class="switch" title="High Def"></button>
+        <button id="gif_tv_button_hue_shift" class="switch" title="Hue Shift"></button>
+        <button id="gif_tv_button_bright" class="switch" title="Bright / Dark"></button>
+        <button id="gif_tv_button_color" class="switch" title="Color / B&W"></button>
+      
+        <span class="cta">Push any Buttons!</span>
+      </div>
+      
+      <div class="heading">
+        <h1 class="heading-memory">keep Memories</h1>
+      
+      </div>
+  
+    </div>
+  </section>
+    <!----------------------------------------------------/contact bell--------------------------------------------------->
+    <div class="container">
+      <h3 class="bell-text"> So are you<span> <br>ready</span></h3>
+      <span id="bell" class="bell bell-animation">
+         🛎️
+      </span>
+      <h3 class="bell-text"> to get in <span> <br>touch?</span></h3>
+    </div>
+<div class="btn-bell">
+ <button onclick="ringbell()">
+      RING BELL TO GET IN TOUCH
+    </button>
+  <input type="number" id="times" value="1">
+  times
+</div>
+
+<script src="js/bell.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
