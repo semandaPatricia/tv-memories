@@ -7,6 +7,7 @@
     <title>Vite App</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="css/footer.css">
   </head>
   <body>
        <!----------------------------------------------------/ navbar--------------------------------------------------->
@@ -73,7 +74,7 @@
     </div>
   </section>
     <!----------------------------------------------------/contact bell--------------------------------------------------->
-    <div class="container">
+    <div class="container-bell">
       <h3 class="bell-text"> So are you<span> <br>ready</span></h3>
       <span id="bell" class="bell bell-animation">
          🛎️
@@ -81,14 +82,110 @@
       <h3 class="bell-text"> to get in <span> <br>touch?</span></h3>
     </div>
 <div class="btn-bell">
- <button onclick="ringbell()">
+ <button class="ding-btn" onclick="ringbell()">
       RING BELL TO GET IN TOUCH
     </button>
   <input type="number" id="times" value="1">
   times
 </div>
 
-<script src="js/bell.js"></script>
+    <!----------------------------------------------------/footer--------------------------------------------------->
+    <footer>
+      <div class="container-footer">
+        <div class="footer_content">
+          
+            <div class="fourth_section">
+              <h3 class="footer_headings">Contact </h3>
+              <h3>SUBSCRIBE TO BE SENT <span class="nude">NUDE</span> TIPS & TRICKS </h3>
+              <form action="#">
+                <div class="form_control">
+                  <input type="text" placeholder="Enter an Email" />
+                </div>
+                <div class="form_control">
+                  <textarea
+                    name=""
+                    id=""
+                    cols="10"
+                    rows="5"
+                    placeholder="Write Message....."
+                  ></textarea>
+                </div>
+                <button type="button">Seduce Me</button>
+              </form>
+            </div>
+            <div class="giffy-item">
+              <img class="giffy"  src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjdsNDRwczgydXFuamthdm91enBodzNrdmk1dWg3d3hnejV1ZzJwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U1037vZUDQMDnmUcmF/giphy.webp" alt="">
+            </div>
+            
+          
+          <div class="first_section">
+            <h3 class="footer_headings">About </h3>
+            <h4>MARA</h4>
+              <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+              adipisci minus ratione nulla cum ut repellendus omnis, odit
+              ducimus nisi?
+            </p>
+            <div class="social_icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-pinterest"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+          <div class="second_section">
+            <h3 class="footer_headings">Explore</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Contact </a></li>
+            </ul>
+          </div>
+          
+          
+        </div>
+      </div>
+      <div class="footer_txt">
+        
+        <p>
+          All rights reserved by
+          <a href="https://www.online.com">MARA</a>  
+          &copy; <span id="currentYear"></span>
+        </p>
+      </div>
+    </footer>
+    <!----------------------------------------------------/JS--------------------------------------------------->
+    <script>
+      const currentYearElement = document.getElementById("currentYear");
+      currentYearElement.textContent = new Date().getFullYear();
+    </script>
+    
+  
+    <script>
+      const body = document.querySelector("body");
+      const navbar = document.querySelector(".navbar");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = ()=>{
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+      }
+      cancelBtn.onclick = ()=>{
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+      }
+      window.onscroll = ()=>{
+        this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+      }
+    </script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/bell.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
