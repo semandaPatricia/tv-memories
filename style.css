@@ -463,7 +463,7 @@ hr{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	
+	font-family: 'Orbitron,san serif';
 }
 .sub-text {
 	margin-top: 30px;
@@ -514,8 +514,114 @@ hr{
 		font-size: 15px;
 	}
 }
+/*maquee*/
 
-
+:root {
+	--step--2: clamp(3.13rem, 5.13rem, 5.76rem);
+	--step--1: clamp(3.75rem, 6.38rem, 7.2rem);
+	--step-0: clamp(4.5rem, 7.93rem, 9rem);
+  }
+  @keyframes marquee {
+	from {
+	  transform: translateX(0);
+	}
+	to {
+	  transform: translateX(-100%);
+	}
+  }
+  @keyframes marquee-r {
+	from {
+	  transform: translateX(-100%);
+	}
+	to {
+	  transform: translateX(0);
+	}
+  }
+  @keyframes rollCage {
+	from {
+	  transform: rotate(0);
+	}
+	to {
+	  transform: rotate(5turn);
+	}
+  }
+ 
+  .marquee {
+	border-bottom: 1px solid #efefef;
+	color: #fefefe;
+	font-size: var(--step-0);
+	height: calc(160px + 4rem);
+	overflow: hidden;
+	position: relative;
+	width: 100vw;
+	font-weight: 700;
+	font-family: 'Orbitron,san serif';
+	/*font-size: 90px;*/
+	
+  }
+  .marquee img {
+	object-fit: cover;
+	max-height: 150px;
+  }
+  .track {
+	height: 100%;
+	overflow: hidden;
+	padding: 1.3rem 0;
+	position: absolute;
+	transition: background-color 300ms ease, color 300ms ease;
+	white-space: nowrap;
+  }
+  .track .text {
+	animation: marquee 50000ms linear infinite;
+	align-items: center;
+	display: inline-flex;
+	will-change: transform;
+  }
+  .track .text.-r {
+	animation-name: marquee-r;
+  }
+  .track .text.-twox {
+	animation-duration: 25000ms;
+  }
+  .track:hover {
+	background-color: #efefef;
+	color: #1a1f24;
+  }
+  .track:hover img {
+	animation: rollCage 10000ms linear infinite;
+  }
+  .track:hover .-green {
+	color: #beb9a3;
+	
+  }
+  .-green {
+	color:rgb(64, 234, 64);
+	font-weight: 700;
+  }
+  .giphy-embed{
+	height: 120px;
+	width: 130px;
+  }
+  
+  @media (max-width: 568px) {
+	.marquee {
+		border-bottom: 1px solid #efefef;
+		
+		height: calc(150px + 3.5rem);
+		width: 100vw;
+		font-weight: 400;
+		/*font-size: 90px;*/
+		
+	  }
+	  .marquee img {
+		object-fit: cover;
+		max-height: 100px;
+	  }
+	
+}
+  
+  
+  
 
 
 
