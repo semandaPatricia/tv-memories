@@ -463,18 +463,22 @@ hr{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	font-family: 'Orbitron,san serif';
+	font-family: 'Roboto,san serif';
+	font-size: 40px;
+	
+	height: 90vh;
+	color:rgb(64, 234, 64) ;
 }
 .sub-text {
-	margin-top: 30px;
+	margin-top: 10px;
   }
   .sub-sub-text {
 	margin-top: 20px;
 	margin-bottom: 20px;
   }
   .accomp {
-	background-color: silver;
-	color: black;
+	/*background-color: silver;
+	color:black;*/
 	padding: 15px;
 	margin: 10px;
 	
@@ -482,6 +486,7 @@ hr{
   .accomp-list{
 	list-style: none;
 	margin-left: 4px;
+	margin-top: 10px;
 	list-style: disc;
   }
 
@@ -495,11 +500,13 @@ hr{
 .right-tribute{
 	width: 550px;
 	height: 450px;
+	font-size: 17px;
 }
 .left-tribute{
 	width: 550px;
 	height: 450px;
 	font-size: 19px;
+
 }
 @media (max-width: 568px) {
 	
@@ -514,7 +521,10 @@ hr{
 		font-size: 15px;
 	}
 }
-/*maquee*/
+/*--------VINYL PLAYER-------*/
+  
+
+/*----------MARQUEE----------*/
 
 :root {
 	--step--2: clamp(3.13rem, 5.13rem, 5.76rem);

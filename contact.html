@@ -21,33 +21,55 @@
         <li><a href="/">Home</a></li>
         <li><a href="/about.html">About</a></li>
         <li><a href="/gallery.html">Gallery</a></li>
-        <li><a href="#">Support</a></li>
+        
         <li><a href="/contact.html">Contact</a></li>
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>
       </div>
     </div>
-  <hr>
+  
   </nav>
     <!----------------------------------------------------/LandingPage--------------------------------------------------->
-    <div class="container">
-      <h3 class="bell-text"> So are you<span> <br>ready</span></h3>
-      <span id="bell" class="bell bell-animation">
-         🛎️
-      </span>
-      <h3 class="bell-text"> to get in <span> <br>touch?</span></h3>
-    </div>
-<div class="btn-bell">
- 
-    <button onclick="ringbell()">
-      RING BELL TO GET IN TOUCH  
-    </button>
-  <input type="number" id="times" value="1">
-  times
-</div>
+   <!-- Responsive Contact Page with Dark Mode and Form Validation (vanilla JS).
+
+*Designed & built for desktop and tablets with viewport width >= 720px and in landscape orientation.  -->
+
+<div class="contact-container">
+  <div class="left-col">
+    <img class="logo" src="/logoip.svg" />
+  </div>
+  <div class="right-col">
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+    </label>
+    <div class="description">Dark Mode</div>
+  </div>
     
-<script defer type="text/javascript" src="/main.js"></script>
+    <h1>Contact Me</h1>
+    <p>
+      Welcome, I’d love to get to know you. Who am i speaking too?
+    </p>
+    
+    <form id="contact-form" method="post">
+      <label for="name">Full name</label>
+  <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+      <label for="email">Email Address</label>
+  <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+      <label for="message">Message</label>
+  <textarea rows="6" placeholder="Your Message" id="message" name="message" required></textarea>
+      <!--<a href="javascript:void(0)">--><button type="submit" id="submit" name="submit">Send</button><!--</a>-->
+  
+</form>
+
+<div id="error"></div>
+<div id="success-msg"></div>
+  </div>
+</div>
+  <script src="./main.js"></script>
+
     <script defer type="text/javascript" src="js/contact.js"></script>
 </body>
 </html>
