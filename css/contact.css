@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 :root {
-    --primary-color: #010712;
+    --primary-color: #000000;
     --secondary-color: #818386;
     --bg-color: #FCFDFD;
     --button-color: #3B3636;
@@ -11,7 +11,8 @@
   [data-theme="dark"] {
     --primary-color: #FCFDFD;
     --secondary-color: #818386;
-    --bg-color: #010712;
+    /*--bg-color: #010712;*/
+    --bg-color:#000000;
     --button-color: #818386;
     --h1-color: #FCFDFD;
   }
